@@ -1,0 +1,9 @@
+#slider_container {width:500px; position:relative; border: none; border-radius: 5px; float: right; margin-left: 20px; margin-top: 10px;}
+#slider_top {width:500px; position: relative; top:0; left:0;}
+#slider_bottom {position:absolute; bottom:0; left:0; background:rgba(255, 153, 0, 0.4); width:500px; height:30px; padding-top:10px; padding-bottom: 5px; text-align: center;}
+#slider_imageNumber {position: absolute; bottom:0px; right:0px; font-size: 20px; color: #fff; font-family: impact; z-index: 1; background: rgba(130, 130, 130, .5); padding: 5px; width: 50px; border-radius: 10px; text-align: center;}
+.slider_nav {visibility: hidden;}
+#slider_container:hover > .slider_nav {visibility: visible;}
+#slider_top img {display: block; width:500px; height:300px;}
+#slider_bottom img{width: 25px; height: 25px;}
+.slider{border:none; padding: 0; margin: 0; border: none; float: none; width: 100px;}

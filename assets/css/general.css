@@ -1,0 +1,489 @@
+/* this CSS file is broken into parts, html tags, id's and classes. Each section tries to follow the order / flow of the html doument */
+
+/* html tags %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+	/* set all paddings and margins to '0' */
+	* {
+		margin: 0;
+		padding:0;
+		font-family: Tahoma, Geneva, sans-serif;
+		font-size: 13px;
+		border-color: #888888;
+	}	
+
+/* page wide links @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+	a:link, a:active, a:visited {
+		text-decoration: none;
+		color: blue;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: #777;	
+	}
+
+	nav a:link, nav a:active, nav a:visited {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	nav ul li a {
+		display: block;
+		padding: 5px;
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 700;
+	}
+
+	nav ul li:hover a {
+		color: #fff;
+	}
+
+	nav ul ul li a {
+		padding: 5px 20px;
+		color: #fff;
+		font-size: 12px;
+		font-weight: 300;
+	}	
+
+	nav ul ul li a:hover {
+		background: #ff7700;
+	}
+
+	/* text @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+	p {
+		margin: 5px;
+		color: #555555;
+	}
+	/* headings @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 5px;
+		color: #3d3d3d;
+	}
+
+			h1 {
+				font-size: 44px;
+			}
+
+				header h1 {
+					float: left;
+					color: #fff;
+				}
+
+			h2 {
+				font-size: 28px;
+				margin-bottom: 20px;
+			}
+
+			h3 {
+				font-size: 20px;
+			}
+
+				aside h3 {
+					margin-left: 0;
+				}
+
+			h4 {
+				font-size: 16px;
+			}
+
+			h5 {
+				font-size: 15px;
+			}
+
+				aside h5 {
+					margin-left: 0;
+				}
+
+			h6 {
+				font-size: 14px;
+			}
+
+	/* forms @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+	fieldset {
+		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 10px 0 10px 0;
+		border-style: none;
+	}
+
+	input {
+		background: #ffffff;
+		border-width: 1px;
+		border-style: solid;
+		font-family: arial;
+		font-size: 12px;
+		font-weight: 200;
+		margin: 0;
+		padding: 0 5px 0 5px;
+		height: 30px;
+		width: 180px;
+	}
+
+		input:focus {
+			outline: none;
+		}
+
+		input[type=text] {
+			color: #666666;
+		}
+
+		input[type=submit] {
+			width: 50px;
+			background: #f80;
+			border-style: none;
+			color: #fff;
+			border-radius: 5px;
+			font-size: 12px;
+		}
+
+	label {
+		display: block;
+		margin: 5px 0 5px 0;
+	}
+	
+	/* image elements @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+	img {
+		float:right;
+		margin: 10px;
+		margin-left: 20px;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #ccc;
+	}
+
+	header img {
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+
+	/* block elements @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+	header {
+	width:100%;
+	border-style: none;
+	background: #f90;
+	}
+
+	header:first-of-type {
+	height: 20px;
+	background: #f80;
+	}
+
+	nav {
+		width: 100%;
+		background: #f50;
+	}
+	
+		nav ul {  
+			list-style: none;
+			display: inline-table;
+			position: relative;
+			padding-top: 6px;
+			float: left;
+			padding-left: 10px;
+		}
+
+		nav ul:after {
+			content: "";
+			clear: both;
+			display: block;
+		}
+
+			nav ul li {
+				float: left;
+				border-style: none;
+				border-radius: 0 5px 0 0;
+			}
+
+			nav ul li:hover {
+				background: #ff7700;
+			}
+
+				nav ul li:hover .arrow-down {
+					border-left: 5px solid transparent;
+					border-right: 5px solid transparent;	
+					border-top: 5px solid #fff;
+				}
+
+			nav ul li:hover > ul {
+				display: block;
+			}
+
+				nav ul ul {
+					display: none;
+					background: rgba(255,136,0,.95);
+					border-radius: 0px;
+					padding: 0;
+					position: absolute;
+					top: 100%;
+					z-index: 1;
+				}
+					nav ul ul li {
+						float: none; 
+						border-top: 1px solid #f90;
+						position: relative;
+					}
+
+						nav ul ul ul {
+							position: absolute;
+							left: 100%;
+							top:0;
+						}
+
+	section {
+		border-style: solid; 
+		border-width:2px;
+		border-top-width: 0;
+		border-radius: 0 0 10px 10px;
+		border-color: #cccccc;
+	}
+
+		section #left {
+			border-radius: 0;
+			width: 740px;
+			float: left;
+			margin: 10px;
+			border: none;
+		}
+
+		section #right {
+			border-radius: 0;
+			width: 230px;
+			float: left;
+			margin: 10px;
+			margin-left: 0;
+			border:none;
+		}
+
+	/* provides tbe foundation style for the main content section of the page*/
+	article {
+		float: left;
+		border-style: solid;
+		border-width: 1px;
+		width:738px;
+		border-radius: 5px 5px 0 0;
+		padding-top: 0;
+		padding-bottom: 10px;
+		border-bottom-width: 20px;	
+	}
+		
+		/* seperates the page title from the page content */
+		article:first-of-type {
+			padding: 0;
+			margin-bottom: 10px;
+			border-bottom-width: 1px;
+			border-radius: 5px 5px 5px 5px;	
+		}
+
+		/* sets the upper and lower margin of the page title section e.g. "home" */
+		article:first-of-type .content {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		article:last-of-type {
+			background: -webkit-linear-gradient(left top, #DDDAD1, #ffffff); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(bottom right, #DDDAD1, #ffffff); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(bottom right, #DDDAD1, #ffffff); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to bottom right, #DDDAD1, #ffffff); /* Standard syntax */
+			height: 200px;
+			border-radius: 0 0 10px 10px;
+			border-top: 0;
+			border-bottom-width: 1px;
+		}		
+
+	aside {
+		float: left;
+		margin: 0;
+		border-style: solid;
+		border-width: 1px;
+		width: 228px;
+		border-radius: 5px;
+		word-wrap: break-word;
+	}
+
+		aside:first-of-type {
+			margin-bottom: 10px;
+		}
+
+	section nav {
+		width: 970px;
+		margin: 10px;
+		margin-top: 0;
+		padding: 5px;
+		border-radius: 5px;
+		text-align: center;
+	}
+
+		section nav p {
+			color: white;
+		}
+
+	footer {
+		width:1000px;
+		border: none;
+		text-align: center;
+		padding-bottom:2px;
+	}
+
+/* id's %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+	#top_container {
+		width:1000px;
+		height: 200px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	#search {
+		position:absolute;
+		width: 285px;
+		top:150px;
+		left:700px;
+	}
+
+		#search input {
+			border-style: none;
+			font-size: 12px;
+		}
+
+		#search input[type=text] {
+			width: 205px;
+			border-radius: 3px 0 0 3px;
+			border-right: solid 1px #f90;
+		}
+		#search input[type=submit] {
+			border-radius: 0 3px 3px 0;
+			background: #fff;
+			color: inherit;
+		}
+
+	#login input[type=submit] {
+		margin-top: 10px;
+	}
+
+/* classes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	.container {
+		width:1000px;	
+		margin: 0 auto;
+		padding:0;
+	}
+
+	.content {
+	width: 716px;
+	border-style: none;
+	margin: 10px;
+	padding:0;
+	overflow: hidden;
+	line-height: 130%;
+	}
+
+	.content img {border-color: #cccccc; border-radius: 5px; width: 100px;}
+	.content img.main {width: 250px;}
+	.content img.links {float:none; border: none; width: 40px; margin: 0; padding: 0;}
+	.content span {display: inline-table; margin-bottom: 5px;}
+	.content .xxxs {width: 50px;}
+	.content .xxs {width: 100px;}
+	.content .xs {width: 150px;}
+	.content .s {width: 200px;}
+	.content .m {width: 250px;}
+	.content .ml {width: 350px;}
+	.content .l {width: 450px;}
+	.content .xl {width: 500px;}
+	.content .xxl {width: 600px;}
+	.content .error {color: red;}
+	.content .top {vertical-align: top; padding-top: 5px;}
+	.content form {display: inline-table;}
+	.content input {border: solid; border-width: 1px; display: inline-table; padding: 0 0 0 5px; margin: 5px; margin-left:0; width: 200px;}
+	.content input[type='file'] {height: 20px; border: none; padding: 3px 0 3px 0;}
+	.content input.none {background: none; border: solid; border-width: 1px; display: inline-table; padding: 0 0 0 5px; margin: 0;}
+	.content h4 {padding:0; padding-bottom:5px; padding-left: 5px; margin: 0;}
+	.content .results {background: #ffffff; margin:0; margin-bottom: 5px; padding:10px; overflow: hidden; border: solid; border-width: 1px; border-radius: 5px; }
+	.content .results:last-child {margin-bottom: 0;}.content .results h4 {padding:0; padding-bottom:5px; }
+	.content p.description {margin-bottom: 30px;}
+	.content textarea {margin-top: 5px; padding: 5px;}
+
+
+	.aside_layout {
+		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 10px 0 10px 0;
+		border-style: none;
+	}
+
+		.aside_layout li {
+			list-style: none;
+		}
+
+	.clear {
+		clear:both;
+	}
+
+	.tab {
+		float:right;
+		background:#fff;
+		margin-top:10px;
+		margin-right:10px;
+		padding:5px;
+		width:75px;
+		border-radius:10px 10px 0 0;
+		text-align:center;
+		color: black;
+	}
+		.tab:hover {
+			background: #f90;
+			color: #fff;
+		}
+
+	.arrow-down {
+		display: inline-block;
+		width: 0; 
+		height: 0; 
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;	
+		border-top: 5px solid #f50;
+		margin-bottom: 3px;
+	}
+
+	.spacer {
+		display:inline-block;
+		width:10px;
+	}
+
+	.message {
+		color: red;
+		padding-top: 5px;
+	}
+
+	table {
+    width: 100%;
+    margin:0;
+    text-align: left;
+	}
+
+	tr:nth-child(even) {
+	    background: #cccccc;
+	}
+
+	tr:nth-child(odd) {
+	    background: #eeeeee;
+	}
+
+	td {
+	padding: 5px;
+	}	
